@@ -14,23 +14,7 @@ export interface IListTaskProps {
 }
 
 function App() {
-  const [tasks, setTasks] = useState<IListTaskProps[]>([
-    {
-      id: uuidv4(),
-      title: 'Task 1',
-      completed: false,
-    },
-    {
-      id: uuidv4(),
-      title: 'Task 2',
-      completed: true,
-    },
-    {
-      id: uuidv4(),
-      title: 'Task 3',
-      completed: true,
-    },
-  ]);
+  const [tasks, setTasks] = useState<IListTaskProps[]>([]);
 
   function addNewTask(newTask: string) {
     setTasks([
@@ -43,11 +27,29 @@ function App() {
     ]);
   }
 
+  function onDeleteTask(idTask: string) {
+    const newTask = tasks.filter((task) => task.id !== idTask);
+    setTasks(newTask);
+  }
+
+  function onCompletedTask(idTask: string) {
+    const newTask = tasks.map((task) => {
+      if (task.id === idTask) {
+        return {
+          ...task,
+          completed: !task.completed,
+        };
+      }
+      return task;
+    });
+    setTasks(newTask);
+  }
+
   return (
     <div>
       <Header onAddNewTask={addNewTask} />
 
-      <Tasks tasks={tasks} />
+      <Tasks tasks={tasks} onDelete={onDeleteTask} onComplete={onCompletedTask} />
     </div>
   );
 }

@@ -10,8 +10,7 @@
   height: 4.5rem;
 
   background: var(--gray-500);
-  border: 1 solid var(--gray-400);
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--gray-400);
   border-radius: 0.5rem;
 }
 
@@ -22,16 +21,21 @@
   margin-right: auto;
 }
 
-.task input[type="radio"] {
+p.checkedTask {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.task input[type="checkbox"] {
   appearance: none;
 
   border: 2px solid var(--blue);
   border-radius: 50%;
-  padding: 0.45rem;
+  padding: 0.475rem;
   cursor: pointer;
 }
 
-.task input[type="radio"]:checked {
+.task input[type="checkbox"]:checked {
   background: var(--purple-dark) url("../../assets/check.svg") center no-repeat;
   border-color: var(--purple-dark);
 }

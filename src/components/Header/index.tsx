@@ -10,16 +10,20 @@ interface HeaderProps {
 }
 
 export function Header({ onAddNewTask }: HeaderProps) {
-  const [newTask, setNewTask] = useState('');
+  const [newTask, setNewTask] = useState("");
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
+    if(!newTask) {
+      return alert('Por favor, preencha uma nova tarefa.')
+    }
+
     onAddNewTask(newTask);
-    setNewTask('');
+    setNewTask("");
   }
 
-  function handleSubmitChange(e: ChangeEvent<HTMLInputElement>) {
+  function handleChangeTask(e: ChangeEvent<HTMLInputElement>) {
     setNewTask(e.target.value);
   }
 
@@ -31,10 +35,11 @@ export function Header({ onAddNewTask }: HeaderProps) {
         <input
           className={styles.inputNewTask}
           placeholder="Adicione uma nova tarefa"
-          onChange={handleSubmitChange}
+          value={newTask}
+          onChange={handleChangeTask}
         />
 
-        <button className={styles.buttonNewTask} type="submit">
+        <button className={styles.buttonNewTask}>
           Criar
           <PlusCircle size={24}/>
         </button>
