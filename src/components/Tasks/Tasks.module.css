@@ -1,0 +1,39 @@
+.tasks {
+  width: 100%;
+  max-width: 46rem;
+  margin: 0 auto;
+  margin-top: 5.625rem;
+  padding: 0 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.header p {
+  color: var(--blue);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.header p.taskCompleted {
+  color: var(--purple);
+}
+
+.header span {
+  background: var(--gray-400);
+  padding: 2px 0.5rem;
+  border-radius: 999px;
+  color: var(--white);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
