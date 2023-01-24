@@ -9,6 +9,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1.5rem;
 }
 
 .header div {
@@ -37,3 +38,10 @@
   font-weight: 700;
 }
 
+.tasksList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
