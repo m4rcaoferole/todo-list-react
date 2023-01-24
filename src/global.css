@@ -11,8 +11,8 @@
   --purple: #8284fa;
   --purple-dark: #5e60ce;
 
-  --blu: #4ea8de;
-  --purple-dark: #1e6f9f;
+  --blue: #4ea8de;
+  --blue-dark: #1e6f9f;
 
   --red-500: #e25858;
 }
@@ -26,11 +26,12 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
   max-width: 1440px;
-  background: var(--gray-700);
+  background: var(--gray-600);
   -webkit-font-smoothing: antialiased;
 }
 
