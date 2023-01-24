@@ -6,24 +6,26 @@ interface TasksProps {
   tasks: IListTaskProps[];
 }
 
-export function Tasks(props: TasksProps) {
+export function Tasks({ tasks }: TasksProps) {
+  const amountTasks = tasks.length
+  const tasksIsCompleted = tasks.filter(task => task.completed === true).length;
 
   return (
     <section className={styles.tasks}>
       <header className={styles.header}>
         <div>
           <p>Tarefas criadas</p>
-          <span>0</span>
+          <span>{amountTasks}</span>
         </div>
 
         <div>
           <p className={styles.taskCompleted}>Concluídas</p>
-          <span>2 de 5</span>
+          <span>{tasksIsCompleted} de {amountTasks}</span>
         </div>
       </header>
 
       <div className={styles.tasksList}>
-        { props.tasks.map( task => {
+        {tasks.map( task => {
           return <Task key={task.id} task={task} />
         })}
       </div>

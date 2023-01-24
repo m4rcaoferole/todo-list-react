@@ -1,12 +1,14 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-import { Header } from "./components/Header";
-import { Tasks } from "./components/Tasks";
+import { v4 as uuidv4 } from 'uuid';
 
-import "./global.css";
+import { Header } from './components/Header';
+import { Tasks } from './components/Tasks';
+
+import './global.css';
 
 export interface IListTaskProps {
-  id: number;
+  id: string;
   title: string;
   completed: boolean;
 }
@@ -14,24 +16,40 @@ export interface IListTaskProps {
 function App() {
   const [tasks, setTasks] = useState<IListTaskProps[]>([
     {
-      id: 1,
-      title: "Task 1",
+      id: uuidv4(),
+      title: 'Task 1',
       completed: false,
     },
     {
-      id: 2,
-      title: "Task 2",
+      id: uuidv4(),
+      title: 'Task 2',
       completed: true,
-    }
-  ])
+    },
+    {
+      id: uuidv4(),
+      title: 'Task 3',
+      completed: true,
+    },
+  ]);
+
+  function addNewTask(newTask: string) {
+    setTasks([
+      ...tasks,
+      {
+        id: uuidv4(),
+        title: newTask,
+        completed: false,
+      },
+    ]);
+  }
 
   return (
     <div>
-      <Header />
+      <Header onAddNewTask={addNewTask} />
 
       <Tasks tasks={tasks} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

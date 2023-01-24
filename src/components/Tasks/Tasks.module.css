@@ -33,8 +33,9 @@
   background: var(--gray-400);
   padding: 2px 0.5rem;
   border-radius: 999px;
-  color: var(--white);
-  font-size: 0.75rem;
+
+  color: var(--gray-200);
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
