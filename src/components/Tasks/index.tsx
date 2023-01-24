@@ -1,7 +1,12 @@
+import { IListTaskProps } from "../../App";
 import { Task } from "../Task"
 import styles from "./Tasks.module.css"
 
-export function Tasks() {
+interface TasksProps {
+  tasks: IListTaskProps[];
+}
+
+export function Tasks(props: TasksProps) {
 
   return (
     <section className={styles.tasks}>
@@ -18,7 +23,9 @@ export function Tasks() {
       </header>
 
       <div className={styles.tasksList}>
-        <Task />
+        { props.tasks.map( task => {
+          return <Task key={task.id} task={task} />
+        })}
       </div>
     </section>
   )

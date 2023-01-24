@@ -1,15 +1,20 @@
 import { Trash } from 'phosphor-react'
+import { IListTaskProps } from '../../App'
 
 import styles from "./Task.module.css"
 
-export function Task() {
+interface TaskProps {
+  task: IListTaskProps;
+}
+
+export function Task(props: TaskProps) {
 
   return (
     <div className={styles.task}>
       <input type='radio' />
 
       <p>
-        Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.
+        {props.task.title}
       </p>
 
       <button>
