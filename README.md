@@ -1,6 +1,6 @@
 <br /><br />
 <h4 align="center">
-<img src="./src/assets/logo.png" align="center"/>
+<img src="./src/assets/logo.svg" align="center"/>
 </h4>
 <br /><br />
 
@@ -18,10 +18,6 @@
  * **Inside project's folder, run:**
  ```bash
 $ npm install
-```
- * **And then, run:**
-  ```bash
-$ npx expo start
 ```
 
 # 📲 Functionalities
