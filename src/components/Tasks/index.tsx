@@ -1,3 +1,4 @@
+import { ClipboardText } from 'phosphor-react';
 import { IListTaskProps } from '../../App';
 import { Task } from '../Task';
 import styles from './Tasks.module.css';
@@ -32,6 +33,13 @@ export function Tasks({ tasks, onDelete, onComplete }: TasksProps) {
         {tasks.map((task) => {
           return <Task key={task.id} task={task} onDelete={onDelete} onComplete={onComplete} />;
         })}
+        { tasks.length <= 0 && (
+          <section className={styles.alertTasks}>
+            <ClipboardText size={56} />
+            <p>Você ainda nãe tem tarefas cadastradas</p>
+            <span>Crie tarefas e organize seus itens a fazer</span>
+          </section>
+        )}
       </div>
     </section>
   );
