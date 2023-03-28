@@ -1,5 +1,5 @@
 <h1>
-    <img alt="Logo ToDo List" src="./.github/logoToDo.png" />
+    <img src="./.github/logoToDo.png" />
 </h1>
 
 ---
@@ -16,6 +16,10 @@ ToDo List é uma aplicação de controle de tarefas no estilo **to-do list**, qu
 - Listas e chaves no ReactJS
 - Propriedades
 - Componentização
+
+<p align="center">
+    <img src="./.github/cover.png" />
+</p>
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 <br/>
