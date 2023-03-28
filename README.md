@@ -1,41 +1,40 @@
-<br /><br />
-<h4 align="center">
-<img src="./src/assets/Logo.svg" align="center"/>
-</h4>
-<br /><br />
+<h1>
+    <img alt="Logo ToDo List" src="./.github/logoToDo.png" />
+</h1>
 
-# 💡 About
+---
 
-**Simple React JS To-Do List AppWeb. Made for Rocketseat's React Ignite Challenge.**
+ToDo List é uma aplicação de controle de tarefas no estilo **to-do list**, que contém as seguintes funcionalidades:
+- Adicionar uma nova tarefa
+- Marcar e desmarcar uma tarefa como concluída
+- Remover uma tarefa da listagem
+- Mostrar o progresso de conclusão das tarefas
 
-# ⚙️ How to run
+**Objetivos**: Apesar de serem poucas funcionalidades, você vai precisar relembrar conceitos como:
+- Estados
+- Imutabilidade do estado
+- Listas e chaves no ReactJS
+- Propriedades
+- Componentização
 
-### 📃 Prerequisites
- * **Node** v16.16.0
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+<br/>
+✔ [Vite](https://vitejs.dev/)
+<br/>
+✔ [ReactJS](https://reactjs.org/)
+<br/>
+✔ [TypeScript](https://www.typescriptlang.org/)
+<br/>
+✔ [Phosphor Icons](https://phosphoricons.com/)
+<br/>
 
-### :computer: On PC
- * **Clone this repository**
- * **Inside project's folder, run:**
- ```bash
-$ npm install
-```
+## ⚙ Settings
 
-# 📲 Functionalities
+Segue os comandos para baixar e executar o projeto na sua máquina:
 
-  * **You can create, check, remove and track your tasks**
-
-
-
-         **➕ Create**                
-         **✔ Check**             
-         **❌ Remove**
-
-
-<p align="center">
-
-![addingTask](https://user-images.githubusercontent.com/12973109/212213124-cad0df39-c1d0-46a8-bc70-31586aabcf07.gif) &nbsp; &nbsp; &nbsp; ![checkTask](https://user-images.githubusercontent.com/12973109/212214142-884f6cbb-6f6c-427b-ab15-63e229f5cb7e.gif)
- &nbsp; &nbsp; &nbsp; ![deleteTask](https://user-images.githubusercontent.com/12973109/212214331-8e9b6649-1915-45ef-b7ee-c2f20591d22d.gif)
-
-</p>
-
- # 💻 Technologies
+* `git clone` + `URL do Projeto`: clonar este repositório.
+* `npm install`: para baixar as dependências do projeto dentro do diretório.
+* `npm run dev`: 
+    - Executa o projeto em modo/ambiente de desenvolvimento.
+    - Abra [http://localhost:5173/](http://localhost:5173/) para ver o projeto rodando no Navegador.
+    - A página será recarregada se você fizer edições no código, e se tiver algum erro será mostrado no console.
