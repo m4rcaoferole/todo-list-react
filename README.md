@@ -1,5 +1,5 @@
 <h1>
-    <img alt="Logo ToDo Lisst" src="./.github/logoToDo.png" />
+    <img alt="Logo ToDo List" src="./.github/logoToDo.png" />
 </h1>
 
 ---
